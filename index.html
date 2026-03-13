@@ -2,151 +2,221 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>PromptForge — AI Prompt Engineering Platform</title>
+<title>PromptForge X — AI Prompt Engineering Platform</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
+
 body{
-    margin:0;
-    font-family:Segoe UI;
-    background:#0f172a;
+    background:#020617;
     color:white;
+    overflow-x:hidden;
 }
 
+/* NAVBAR */
 nav{
-    background:#020617;
-    padding:15px 40px;
     display:flex;
     justify-content:space-between;
-    align-items:center;
+    padding:20px 60px;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
 }
 
-nav h1{color:#a78bfa}
+nav h1{
+    background:linear-gradient(90deg,#6366f1,#ec4899);
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+    color:transparent;
+}
 
 nav a{
-    color:white;
-    margin-left:20px;
+    margin-left:25px;
     text-decoration:none;
+    color:white;
 }
 
-section{padding:60px 40px}
-
+/* HERO */
 .hero{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    background:linear-gradient(135deg,#6366f1,#a855f7);
+    background:radial-gradient(circle at 50% 50%,#1e1b4b,#020617);
 }
 
-.hero h2{font-size:48px}
+.hero h2{
+    font-size:64px;
+    background:linear-gradient(90deg,#a78bfa,#f472b6);
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+    color:transparent;
+}
+
+.hero p{margin:20px;font-size:20px;color:#cbd5e1}
 
 button{
-    padding:12px 22px;
+    padding:14px 28px;
     margin:10px;
     border:none;
-    border-radius:8px;
-    background:#a78bfa;
+    border-radius:12px;
+    background:linear-gradient(90deg,#6366f1,#ec4899);
     color:white;
     font-size:16px;
     cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{transform:scale(1.08)}
+
+section{padding:80px 60px}
+
+/* CARDS */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
 }
 
 .card{
-    background:#1e293b;
-    padding:20px;
-    border-radius:12px;
-    margin:15px 0;
+    background:rgba(255,255,255,0.05);
+    padding:25px;
+    border-radius:18px;
+    backdrop-filter:blur(10px);
+    transition:0.3s;
+    border:1px solid rgba(255,255,255,0.1);
 }
 
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #6366f1;
+}
+
+/* PROMPT LAB */
 textarea{
     width:100%;
-    height:120px;
-    border-radius:8px;
-    padding:10px;
+    height:140px;
+    border-radius:12px;
+    padding:15px;
+    border:none;
+    font-size:16px;
 }
 
+.output{
+    margin-top:20px;
+    padding:20px;
+    background:#1e293b;
+    border-radius:12px;
+}
+
+/* FOOTER */
 footer{
     text-align:center;
-    padding:20px;
-    background:#020617;
+    padding:25px;
+    background:#000;
+    margin-top:50px;
 }
+
 </style>
 </head>
 
 <body>
 
 <nav>
-<h1>PromptForge</h1>
+<h1>PromptForge X</h1>
 <div>
 <a href="#learn">Learn</a>
+<a href="#features">Features</a>
 <a href="#lab">Prompt Lab</a>
-<a href="#library">Library</a>
 <a href="#about">About</a>
 </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-<h2>🔥 Master AI Prompt Engineering</h2>
-<p>Learn to communicate with AI effectively and unlock powerful results.</p>
-<button onclick="scrollToSection('learn')">Start Learning</button>
-<button onclick="scrollToSection('lab')">Try Prompt Lab</button>
+<h2>Forge Powerful AI Prompts ⚡</h2>
+<p>Master the art of prompt engineering for ChatGPT, image AI, and coding assistants.</p>
+<button onclick="scrollTo('lab')">Try Prompt Lab</button>
+<button onclick="scrollTo('learn')">Start Learning</button>
 </section>
 
 <!-- LEARN -->
 <section id="learn">
-<h2>📘 Learning Modules</h2>
+<h2>📘 Learning Path</h2>
+
+<div class="grid">
 
 <div class="card">
 <h3>🟢 Beginner</h3>
-<p>Introduction to prompts, basic structure, and common mistakes.</p>
+<p>Understand prompts, structure, and basic AI interaction techniques.</p>
 </div>
 
 <div class="card">
 <h3>🟡 Intermediate</h3>
-<p>Role prompting, examples, formatting, and task design.</p>
+<p>Role prompting, examples, constraints, and formatting.</p>
 </div>
 
 <div class="card">
 <h3>🔴 Advanced</h3>
-<p>Chain-of-thought prompting, optimization, and multi-step prompts.</p>
+<p>Chain-of-thought, optimization, and multi-step reasoning prompts.</p>
 </div>
 
+</div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+<h2>✨ Platform Features</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🤖 Prompt Analyzer</h3>
+<p>Get quality scores and suggestions.</p>
+</div>
+
+<div class="card">
+<h3>🧪 Prompt Lab</h3>
+<p>Experiment and refine prompts in real time.</p>
+</div>
+
+<div class="card">
+<h3>📚 Prompt Library</h3>
+<p>Access categorized ready-to-use prompts.</p>
+</div>
+
+<div class="card">
+<h3>🏆 Skill Tracking</h3>
+<p>Monitor your prompt engineering progress.</p>
+</div>
+
+</div>
 </section>
 
 <!-- PROMPT LAB -->
 <section id="lab">
 <h2>🧪 Prompt Lab</h2>
 
-<textarea id="userPrompt" placeholder="Enter your prompt..."></textarea>
+<textarea id="promptInput" placeholder="Enter your prompt..."></textarea>
 
+<button onclick="analyzePrompt()">Analyze Prompt</button>
 <button onclick="improvePrompt()">Improve Prompt</button>
 
-<div class="card">
-<h3>Improved Prompt:</h3>
-<p id="output">Your improved prompt will appear here.</p>
-</div>
-</section>
-
-<!-- LIBRARY -->
-<section id="library">
-<h2>📚 Prompt Library</h2>
-
-<div class="card">
-<h3>✍️ Writing</h3>
-<p>Create stories, essays, and blog posts.</p>
-</div>
-
-<div class="card">
-<h3>💻 Coding</h3>
-<p>Generate code snippets and debugging help.</p>
-</div>
-
-<div class="card">
-<h3>🎨 Image Generation</h3>
-<p>Create prompts for AI art tools.</p>
-</div>
-
-<div class="card">
-<h3>📊 Business</h3>
-<p>Marketing, planning, and productivity prompts.</p>
+<div class="output">
+<h3>Analysis / Output</h3>
+<p id="result">Your results will appear here.</p>
 </div>
 
 </section>
@@ -156,35 +226,48 @@ footer{
 <h2>👤 About</h2>
 
 <p>
-PromptForge is an AI prompt engineering learning platform developed as an internship project to help users master effective communication with modern AI systems.
+PromptForge X is an advanced AI prompt engineering learning platform developed as an internship project to demonstrate practical skills in AI, UI design, and web development.
 </p>
 
-<p><b>Developed by Raj Barsaiya</b><br>
-B.Tech IT Student</p>
+<p><b>Developed by Raj Barsaiya</b><br>B.Tech IT Student</p>
 
 </section>
 
 <footer>
-<p>© 2026 PromptForge — Internship Project</p>
+<p>© 2026 PromptForge X — Internship Project</p>
 </footer>
 
 <script>
 
-function scrollToSection(id){
+function scrollTo(id){
     document.getElementById(id).scrollIntoView({behavior:"smooth"});
 }
 
+function analyzePrompt(){
+    let p=document.getElementById("promptInput").value;
+
+    if(!p){alert("Enter a prompt");return;}
+
+    let score = Math.min(100, 40 + p.length);
+
+    let feedback = "Clarity Score: " + score + "/100\n";
+
+    if(p.length < 30) feedback += "❌ Too short — add more details.\n";
+    else feedback += "✅ Good detail level.\n";
+
+    if(!p.includes("Act as")) feedback += "💡 Tip: Try role prompting.\n";
+
+    document.getElementById("result").innerText = feedback;
+}
+
 function improvePrompt(){
-    let input=document.getElementById("userPrompt").value;
+    let p=document.getElementById("promptInput").value;
 
-    if(input.trim()==""){
-        alert("Enter a prompt first");
-        return;
-    }
+    if(!p){alert("Enter a prompt");return;}
 
-    let improved = "Act as an expert. Provide a detailed, structured response for the following request: " + input;
+    let improved = "Act as an expert. Provide a clear, detailed, step-by-step response for the following task: " + p;
 
-    document.getElementById("output").innerText = improved;
+    document.getElementById("result").innerText = improved;
 }
 
 </script>
